@@ -22,7 +22,8 @@
     font-size: 12px;
     text-decoration: none;
     text-transform: uppercase;
-    color: black; }
+    color: black;
+    transition: 0.5s ease-in-out; }
     .nav__link:hover {
       color: #00acdc; }
     .nav__link_active {
