@@ -1,13 +1,11 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  padding-top: 15px;
   width: 200px;
   height: 403px;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  margin-top: 40px; }
+  border-radius: 5px; }
   .card__picture {
     margin: 0 auto;
     transition: transform 1s;
@@ -24,28 +22,31 @@
     line-height: 15px;
     font-size: 12px;
     font-weight: 500;
-    margin: 0 13px;
+    margin: 0 14px;
     padding-top: 29px; }
   .card__code {
     margin: 6px 15px; }
   .card__rating {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 15px 0; }
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 21px;
+    margin: 10px 14px 0; }
   .card__reviews {
     font-size: 11px;
     line-height: 13px;
     margin: 0; }
   .card__price {
-    display: flex;
-    justify-content: space-between; }
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr); }
   .card__price-title {
     margin: 25px 15px 0; }
   .card__price-number {
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
-    margin: 21px 15px 0; }
+    margin: 21px 15px 0 4px; }
 
 .button {
   display: block;
@@ -72,8 +73,8 @@
     color: #00acdc; }
 
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
@@ -113,7 +114,8 @@
         bottom: 0; }
 
 .stars {
-  display: flex; }
+  display: grid;
+  grid-template-columns: repeat(5, 17px); }
   .stars__star {
     margin-right: 4px;
     width: 15px;
@@ -140,14 +142,15 @@ body {
   margin: 0; }
 
 .container {
-  display: flex;
+  display: grid;
   margin: 0 auto;
-  max-width: 1024px;
-  width: calc(100% - 80px); }
+  max-width: 1024px; }
   .container__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-gap: 50px;
+    justify-content: center;
+    margin: 50px 0;
     min-width: 994px;
     width: calc(100% - 80px); }
 
