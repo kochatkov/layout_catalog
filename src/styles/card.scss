@@ -1,16 +1,14 @@
 @import "var";
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  padding-top: 15px;
   width: 200px;
   height: 403px;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  margin-top: 40px;
-
+  
   &__picture {
     margin: 0 auto;
     transition: transform 1s;
@@ -31,7 +29,7 @@
     line-height: 15px;
     font-size: 12px;
     font-weight: 500;
-    margin: 0 13px;
+    margin: 0 14px;
     padding-top: 29px;
   }
 
@@ -40,9 +38,11 @@
   }
 
   &__rating {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 15px 0;
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 21px;
+    margin: 10px 14px 0;
   }
 
   &__reviews {
@@ -52,8 +52,9 @@
   }
 
   &__price {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__price-title {
@@ -64,7 +65,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
-    margin: 21px 15px 0;
+    margin: 21px 15px 0 4px;
   }
 }
 
